@@ -27,6 +27,7 @@ function answerTwoFunction() {
 //when answer four is clicked 
 };
 
+
 $(function(){
   $("#start").keyup(function (e) {
     if (e.which == 13) {
@@ -35,6 +36,8 @@ $(function(){
     }
   });
 });
+
+
 
 const questions = [
   {
@@ -96,3 +99,10 @@ function displayQuestion() {
 }
 
 */
+
+$(document).keypress(function(event){
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if(keycode == '13'){
+    $(element).trigger('click');;   
+  }
+});
