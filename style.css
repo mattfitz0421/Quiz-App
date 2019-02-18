@@ -1,0 +1,107 @@
+#main {
+   position: relative;
+    background-color: orange; 
+    margin:auto;
+    min-width: 320px;
+    max-width: 85%;
+    min-height: 50%;
+    padding-bottom: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+    /*
+    body {
+    
+    }
+    */
+
+    #hey {
+     display: none;
+    }
+    
+    #numbr {
+        position: absolute;
+        left: 90%;
+        top: 5%;
+    }
+    
+    #score {
+        position: absolute;
+        left: 90%;
+        top: 88%;
+    }
+    
+    #start {
+        position: absolute;
+        left: 48%;
+        top: 65%;
+    }
+    
+    #arrow {
+        position: absolute;
+        left: 85%;
+        top: 50%;
+    }
+    
+    #feedback {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+    }
+    
+    #question {
+        position: absolute;
+        left: 47%;
+        top: 30%;
+    }
+    
+    #dogQuizTitle {
+        position: absolute;
+        left: 47%;
+        top: 30%;
+    }
+    
+    
+    #form {
+        position: absolute;
+        left: 42.5%;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        min-width: 15%;
+    }
+    /*
+    #answer1 {
+        
+    }
+    */
+    #tryAgain {
+        position: absolute;
+        left: 47%;
+        top: 80%;
+    }
+    
+    .answers {
+       
+    }
+
+    
+
+    
+    .arrowFeedback {
+        visibility: hidden;
+    }
+
+    .afterStarting {
+        visibility: visible;
+    }
+
+    .hideOnLoad {
+        visibility: hidden;
+    }
+
+    .afterQuiz {
+        visibility: hidden;
+    }

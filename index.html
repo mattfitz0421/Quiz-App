@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Quiz App</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script src="script.js"></script>
+  <main>
+    <div id="main">
+  
+  <div id="numbr" class="hideOnLoad" aria-roledescription="displayProgress">
+    0/0
+  </div>
+<div id="dogQuizTitle" class="afterStarting" aria-roledescription="quizTitle">
+    Dog Quiz
+</div>
+<div id="question" class="hideOnLoad" aria-roledescription="Question">
+  question
+</div>
+<div id="start" class="afterStarting" tabindex="0" aria-roledescription="startQuiz">
+  <button id="start">
+    start
+  </button>
+</div>
+<div id="formDiv">
+  <form id="form" class="hideOnLoad" aria-roledescription="Answer selection that appears only after start is pressed">
+      <input type="button" onclick="answerOneFunction()" id="answer1" class="answers" tabindex="0" aria-roledescription="Answer1"/>
+      <input type="button" onclick="answerTwoFunction()" id="answer2" class="answers" tabindex="0" aria-roledescription="Answer2"/>
+      <input type="button" onclick="answerThreeFunction()"id="answer3" class="answers" tabindex="0" aria-roledescription="Answer3"/>
+      <input type="button" onclick="answerFourFunction()"id="answer4" class="answers" tabindex="0" aria-roledescription="Answer4"/>
+  </form>
+</div>
+<div id="feedback" class="arrowFeedback" aria-roledescription="Feedback after question is answered">
+  feedback
+</div>
+<div id="arrow" class="arrowFeedback" tabindex="0" aria-roledescription="arrow to get to next question" >
+  <button>
+      &#8594;
+  </button>
+</div>
+<button id="tryAgain" class="afterQuiz" tabindex="0" aria-roledescription="try the quiz again">
+  try again
+</button>
+<div id="score" class="hideOnLoad" aria-roledescription="currentScore">
+    0/0
+</div>
+<div id="hey" aria-roledescription="useless">
+    hey
+  </div>
+</div>
+</main>
+</body>
+</html>
