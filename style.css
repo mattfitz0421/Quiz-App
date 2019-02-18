@@ -4,22 +4,19 @@
     margin:auto;
     min-width: 320px;
     max-width: 85%;
-    min-height: 50%;
-    padding-bottom: 40%;
+    min-height: 30vw;
+    padding-bottom: 10%;
+    overflow: visible;
     margin-top: 5%;
-    margin-bottom: 5%;
+    font-size: 2.5vw;
     color: blue;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    margin-bottom: 10%; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-    /*
-    body {
-    
-    }
-    */
+   
 
-    #hey {
-     display: none;
-    }
+
+    
     
     #numbr {
         position: absolute;
@@ -49,6 +46,7 @@
         position: absolute;
         left: 10%;
         top: 50%;
+        
     }
     
     #question {
@@ -72,11 +70,7 @@
         flex-direction: column;
         min-width: 15%;
     }
-    /*
-    #answer1 {
-        
-    }
-    */
+    
     #tryAgain {
         position: absolute;
         left: 47%;
@@ -105,3 +99,12 @@
     .afterQuiz {
         visibility: hidden;
     }
+
+    #hey{
+        display: none;
+    }
+
+    body{
+        background-color: orange;
+    }
+    
