@@ -12,12 +12,9 @@ $( document ).ready( function() {
 });
 
 function populateQuestionData(questionNumber){
-
 var fetchString;
-
 fetchString = questions[questionNumber].question;
 $("#question").html(fetchString);
-
 fetchString = questions[questionNumber].answer1;
 $("#answer1").val(fetchString);
 fetchString = questions[questionNumber].answer2;
@@ -139,8 +136,5 @@ function feedback(questionFeedback){
   
   
 }
-  /*
-if ($(window).width() < 500) {
-  $('#main').css("font-size", "50%");
-}
-*/
+
+
