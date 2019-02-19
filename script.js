@@ -2,12 +2,11 @@ $( document ).ready( function() {
   $( "#start" ).click( function() {
     $( ".hideOnLoad" ).css("visibility","visible" );
     $( ".afterStarting" ).css("visibility","hidden" );
-
       //hides everything besides title and start button on load
-
       populateQuestionData(1);
-      //new
+      //starts quiz with question1
       feedback(1);
+      //Feedbck after first question
   });
 });
 
@@ -23,11 +22,10 @@ fetchString = questions[questionNumber].answer3;
 $("#answer3").val(fetchString);
 fetchString = questions[questionNumber].answer4;
 $("#answer4").val(fetchString);
-
+//Fills placeholders with content
   
 
 }
-//new
 
 function answerOneFunction() {
  $(".arrowFeedback").css("visibility", "visible")
@@ -54,11 +52,10 @@ $(function(){
   $("#start").keyup(function (e) {
     if (e.which == 13) {
       $('#start').trigger('click');
-    //when enter is pressed
     }
   });
 });
-
+//when enter is pressed
 
 
 const questions = [
@@ -108,6 +105,7 @@ const questions = [
     feedback: "Pitbulls tend to be naturally aggressive"
   },
 ]
+//Array with objects containing question and answers
 
 const correctAnswers = [
   "German",
@@ -116,7 +114,7 @@ const correctAnswers = [
   "mexico",
   "pitbull",
 ]
-
+//Array of Correct Answers
 
 
 $(document).keypress(function(event){
@@ -125,6 +123,7 @@ $(document).keypress(function(event){
     $(element).trigger('click');;   
   }
 });
+//Lets user press enter key to fire
 
 function feedback(questionFeedback){
 
@@ -133,8 +132,26 @@ function feedback(questionFeedback){
   fetchString = questions[questionFeedback].feedback;
   $("#feedback").html(fetchString);
   
-  
-  
 }
+//Function itself to place feedback over placeholder
 
+function arrowLoop() {
 
+}
+//loop for when arrow button is clicked, renders next question and set of answers
+
+function progressLoop() {
+
+}
+//loop for when arrow and start button are clicked, increase current/total 
+
+function resultsPage() {
+
+}
+//if and else statement that renders results page should question number = 5 
+//and arrow is clicked
+
+function score() {
+
+}
+//if and else statement if answer= true ++ total score
