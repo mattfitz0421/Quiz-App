@@ -3,9 +3,9 @@ $( document ).ready( function() {
     $( ".hideOnLoad" ).css("visibility","visible" );
     $( ".afterStarting" ).css("visibility","hidden" );
       //hides everything besides title and start button on load
-      populateQuestionData(1);
+      populateQuestionData(0);
       //starts quiz with question1
-      feedback(1);
+      feedback(0);
       //Feedbck after first question
   });
 });
@@ -23,8 +23,6 @@ $("#answer3").val(fetchString);
 fetchString = questions[questionNumber].answer4;
 $("#answer4").val(fetchString);
 //Fills placeholders with content
-  
-
 }
 
 function answerOneFunction() {
@@ -136,26 +134,42 @@ function feedback(questionFeedback){
 //Function itself to place feedback over placeholder
 
 
-
-
-
-function arrowLoop() {
-
+function arrowNext() {
+  $(".arrowFeedback").css("visibility", "hidden")
+ 
 }
-//loop for when arrow button is clicked, renders next question and set of answers
+
+
+/*
+
+//loop for when arrow button is clicked (click is already programmed in HTML), renders next question and set of answers
 
 function progressLoop() {
-
+  for ("statement 1:exexcutedbefore"; "statement 2:definesCondtion"; "statement 3:executedAfterCodeBlockExecuted) 
+  {
+    // code block to be executed
+  }
 }
 //loop for when arrow and start button are clicked, increase current/total 
 
 function resultsPage() {
-
+  if (condition) {
+    // block of code to be executed if the condition is true
+  } else { 
+    // block of code to be executed if the condition is false
+  }
 }
 //if and else statement that renders results page should question number = 5 
 //and arrow is clicked
 
 function score() {
-
+  if (condition) {
+    // block of code to be executed if the condition is true
+  } else { 
+    // block of code to be executed if the condition is false
+  }
 }
 //if and else statement if answer= true ++ total score
+
+
+*/

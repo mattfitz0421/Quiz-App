@@ -8,31 +8,38 @@
     padding-bottom: 10%;
     overflow: visible;
     margin-top: 5%;
-    font-size: 2.5vw;
+    font-size: 2.1vw;
     color: blue;
     margin-bottom: 10%; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-   
 
-
-    
-    
     #numbr {
         position: absolute;
-        left: 90%;
+        left: 95%;
         top: 5%;
+        border-radius: 5px;
+        border: 2px solid;
+        border-color: rgb(233, 233, 233);;
+        background-color: white;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     
     #score {
         position: absolute;
         top: 5%;
+        border-radius: 5px;
+        border: 2px solid;
+        border-color: rgb(233, 233, 233);;
+        background-color: white;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     
     #start {
         position: absolute;
         left: 48%;
         top: 65%;
+        font-size: 2vw;
     }
     
     #arrow {
@@ -42,24 +49,40 @@
     }
     
     #feedback {
+        font-size: 2vw;
         position: absolute;
-        left: 10%;
         top: 50%;
-        
+        border-radius: 5px;
+        border: 2px solid;
+        border-color: rgb(233, 233, 233);;
+        padding: 2px;
+        background-color: white;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     
     #question {
         position: absolute;
-        left: 40%;
+        left: 30%;
         top: 30%;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid;
+        border-color: rgb(191, 191, 191);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     
     #dogQuizTitle {
+        padding: 3px;
         position: absolute;
-        left: 47%;
+        left: 42%;
         top: 30%;
+        font-size: 4vw;
+        border-radius: 5px;
+        border: 2px solid;
+        border-color: rgb(233, 233, 233);;
+        background-color: white;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
-    
     
     #form {
         position: absolute;
@@ -83,7 +106,6 @@
     */
     
 
-    
     .arrowFeedback {
         visibility: hidden;
     }
@@ -109,5 +131,25 @@
     }
     
     .answers {
-        font-size: 40%;
+        size: 80%;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
+    
+    /*
+    .hideAfterQuiz {
+        
+    }
+    */
+
+
+    button {
+        color: blue;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        font-size: 3vw;
+        border-radius: 5px;
+        border: 2px solid;
+        border-color: rgb(233, 233, 233);;
+        background-color: white;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+

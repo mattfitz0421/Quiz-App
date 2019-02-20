@@ -15,30 +15,30 @@
   <div id="numbr" class="hideOnLoad" aria-roledescription="displayProgress">
     0/0
   </div>
-<div id="dogQuizTitle" class="afterStarting" aria-roledescription="quizTitle">
+<div id="dogQuizTitle" class="afterStarting" class="hideAfterQuiz" aria-roledescription="quizTitle">
     Dog Quiz
 </div>
-<div id="question" class="hideOnLoad" aria-roledescription="Question">
+<div id="question" class="hideOnLoad" class="hideAfterQuiz" aria-roledescription="Question">
   question
 </div>
-<div id="start" class="afterStarting" tabindex="0" aria-roledescription="startQuiz">
+<div id="start" class="afterStarting" class="hideAfterQuiz" tabindex="0" aria-roledescription="startQuiz">
   <button id="start">
     start
   </button>
 </div>
-<div id="formDiv">
-  <form id="form" class="hideOnLoad" aria-roledescription="Answer selection that appears only after start is pressed">
+<div id="formDiv" class="hideAfterQuiz">
+  <form id="form" class="hideOnLoad" aria-roledescription="Answer selection that appears only after start is pressed" >
       <input type="button" onclick="answerOneFunction()" id="answer1" class="answers" tabindex="0" aria-roledescription="Answer1" size="4"/>
       <input type="button" onclick="answerTwoFunction()" id="answer2" class="answers" tabindex="0" aria-roledescription="Answer2" size="4"/>
       <input type="button" onclick="answerThreeFunction()"id="answer3" class="answers" tabindex="0" aria-roledescription="Answer3"size="4"/>
       <input type="button" onclick="answerFourFunction()"id="answer4" class="answers" tabindex="0" aria-roledescription="Answer4" size="4"/>
   </form>
 </div>
-<div id="feedback" class="arrowFeedback" aria-roledescription="Feedback after question is answered">
+<div id="feedback" class="arrowFeedback" class="hideAfterQuiz" aria-roledescription="Feedback after question is answered">
   feedback
 </div>
-<div id="arrow" class="arrowFeedback" tabindex="0" aria-roledescription="arrow to get to next question" >
-  <button id="arrowButton">
+<div id="arrow" class="arrowFeedback" class="hideAfterQuiz" tabindex="0" aria-roledescription="arrow to get to next question" >
+  <button id="arrowButton" onclick="arrowNext()">
       &#8594;
   </button>
 </div>
