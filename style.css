@@ -66,6 +66,7 @@
         top: 30%;
         border-radius: 5px;
         background-color: white;
+        padding: 2px;
         border: 2px solid;
         border-color: rgb(191, 191, 191);
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
