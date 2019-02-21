@@ -1,16 +1,28 @@
+var gblQuestionCount;
+var gblProperScore;
+
+
 $( document ).ready( function() {
   $( "#start" ).click( function() {
     $( ".hideOnLoad" ).css("visibility","visible" );
     $( ".afterStarting" ).css("visibility","hidden" );
-      //hides everything besides title and start button on load
-      populateQuestionData(0);
-      //starts quiz with question1
-      feedback(0);
-      //Feedbck after first question
+    $("#form").on('submit', function(e){
+      e.preventDefault();
+   });
+gblQuestionCount = 0;
+gblProperScore = 0;
+var lclDisplayCount = gblQuestionCount + 1;
+$("#displayCount").html(lclDisplayCount);
+//hides everything besides title and start button on load
+populateQuestionData(gblQuestionCount);
+//starts quiz with question1
+feedback(gblQuestionCount);
+//Feedbck after first question
   });
 });
 
 function populateQuestionData(questionNumber){
+// alert("populateQuestionData");
 var fetchString;
 fetchString = questions[questionNumber].question;
 $("#question").html(fetchString);
@@ -45,7 +57,6 @@ function answerTwoFunction() {
 //when answer four is clicked 
 };
 
-
 $(function(){
   $("#start").keyup(function (e) {
     if (e.which == 13) {
@@ -54,7 +65,6 @@ $(function(){
   });
 });
 //when enter is pressed
-
 
 const questions = [
   {
@@ -82,7 +92,7 @@ const questions = [
     answer2: "Dog Shows",
     answer3: "Hunting",
     answer4: "Eating",
-    feedback: "The Labrador Retriever is trained for retrieving"
+    feedback: "The Labrador Retriever is trained <br> for retrieving"
   },
   {
     number:4,
@@ -114,7 +124,6 @@ const correctAnswers = [
 ]
 //Array of Correct Answers
 
-
 $(document).keypress(function(event){
   var keycode = (event.keyCode ? event.keyCode : event.which);
   if(keycode == '13'){
@@ -124,43 +133,34 @@ $(document).keypress(function(event){
 //Lets user press enter key to fire
 
 function feedback(questionFeedback){
-
   var fetchString;
-  
   fetchString = questions[questionFeedback].feedback;
   $("#feedback").html(fetchString);
-  
 }
 //Function itself to place feedback over placeholder
 
-
 function arrowNext() {
   $(".arrowFeedback").css("visibility", "hidden")
- 
-}
+  gblQuestionCount = gblQuestionCount + 1;
+if(gblQuestionCount >=5 ){
+  $(".hideAfterQuiz").css("visibility", "hidden")
+  $(".hideOnLoad").css("visibility", "hidden")
+  $(".afterQuiz").css("visibility", "visible")
+  $("#score").css("visibility", "visible")
+  $("#tryAgain").click("visibility", "visible")
+  
+}else{
+populateQuestionData(gblQuestionCount);
+feedback(gblQuestionCount);
+var lclDisplayCount = gblQuestionCount + 1;
+$("#displayCount").html(lclDisplayCount);
+}}
 
+$('.answers').on('click', function() {
+  $(this).prop('disabled', true);
+});
 
 /*
-
-//loop for when arrow button is clicked (click is already programmed in HTML), renders next question and set of answers
-
-function progressLoop() {
-  for ("statement 1:exexcutedbefore"; "statement 2:definesCondtion"; "statement 3:executedAfterCodeBlockExecuted) 
-  {
-    // code block to be executed
-  }
-}
-//loop for when arrow and start button are clicked, increase current/total 
-
-function resultsPage() {
-  if (condition) {
-    // block of code to be executed if the condition is true
-  } else { 
-    // block of code to be executed if the condition is false
-  }
-}
-//if and else statement that renders results page should question number = 5 
-//and arrow is clicked
 
 function score() {
   if (condition) {
@@ -170,6 +170,4 @@ function score() {
   }
 }
 //if and else statement if answer= true ++ total score
-
-
 */
