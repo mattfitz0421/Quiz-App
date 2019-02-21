@@ -6,14 +6,15 @@ $( document ).ready( function() {
   $( "#start" ).click( function() {
     $( ".hideOnLoad" ).css("visibility","visible" );
     $( ".afterStarting" ).css("visibility","hidden" );
+    //hides everything besides title and start button on load
     $("#form").on('submit', function(e){
       e.preventDefault();
+      //prevents default submit
    });
 gblQuestionCount = 0;
 gblProperScore = 0;
 var lclDisplayCount = gblQuestionCount + 1;
 $("#displayCount").html(lclDisplayCount);
-//hides everything besides title and start button on load
 populateQuestionData(gblQuestionCount);
 //starts quiz with question1
 feedback(gblQuestionCount);
@@ -39,7 +40,7 @@ $("#answer4").val(fetchString);
 
 function answerOneFunction() {
  $(".arrowFeedback").css("visibility", "visible")
-//when answer one is clicked
+ //when answer one is clicked
 };
 
 function answerTwoFunction() {
@@ -74,7 +75,8 @@ const questions = [
     answer2: "Swiss",
     answer3: "Austrian",
     answer4: "French",
-    feedback: "The German Shepard is from Germany"
+    feedback: "The German Shepard is from Germany",
+    score: 1,
   },
   {
     number:2,
@@ -83,7 +85,8 @@ const questions = [
     answer2: "Europe",
     answer3: "North America",
     answer4: "South America",
-    feedback: "The Pug is from Asia"
+    feedback: "The Pug is from Asia",
+    score: 2,
   },
   {
     number:3,
@@ -92,7 +95,8 @@ const questions = [
     answer2: "Dog Shows",
     answer3: "Hunting",
     answer4: "Eating",
-    feedback: "The Labrador Retriever is trained <br> for retrieving"
+    feedback: "The Labrador Retriever is trained <br> for retrieving",
+    score: 3,
   },
   {
     number:4,
@@ -101,7 +105,8 @@ const questions = [
     answer2: "England",
     answer3: "France",
     answer4: "China",
-    feedback: "The Chihuahua is from Mexico"
+    feedback: "The Chihuahua is from Mexico",
+    score: 4,
   },
   {
     number:5,
@@ -110,7 +115,8 @@ const questions = [
     answer2: "Weiner Dog",
     answer3: "Pug",
     answer4: "Poodle",
-    feedback: "Pitbulls tend to be naturally aggressive"
+    feedback: "Pitbulls tend to be naturally aggressive",
+    score: 5,
   },
 ]
 //Array with objects containing question and answers
@@ -148,7 +154,7 @@ if(gblQuestionCount >=5 ){
   $(".afterQuiz").css("visibility", "visible")
   $("#score").css("visibility", "visible")
   $("#tryAgain").click("visibility", "visible")
-  
+  $('#score').css('left', '20%;')
 }else{
 populateQuestionData(gblQuestionCount);
 feedback(gblQuestionCount);
@@ -160,14 +166,18 @@ $('.answers').on('click', function() {
   $(this).prop('disabled', true);
 });
 
-/*
+function scoring(lclScoreCount) {
+  var lclScoreCount = gblProperScore + 1;
+  gblproperScore = 0;
+  $("#scoreDisplay").html(lclScoreCount);
+  $(".arrowFeedback").css("visibility", "visible")
 
-function score() {
-  if (condition) {
-    // block of code to be executed if the condition is true
-  } else { 
-    // block of code to be executed if the condition is false
-  }
 }
-//if and else statement if answer= true ++ total score
-*/
+
+function tryAgain() {
+  location.reload();
+}
+
+
+
+
