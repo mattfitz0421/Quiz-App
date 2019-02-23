@@ -8,7 +8,7 @@
      padding-bottom: 10%;
      overflow: visible;
      margin-top: 5%;
-     font-size: 2.1vw;
+     font-size: 2.4vw;
      color: blue;
      margin-bottom: 10%; 
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -42,11 +42,20 @@
          top: 65%;
          font-size: 2vw;
      }
+
+     #start:hover {
+         cursor: pointer 
+     }
      
      #arrow {
          position: absolute;
          left: 85%;
          top: 50%;
+         
+     }
+
+     #arrowButton:hover {
+        cursor: pointer 
      }
      
      #feedback {
@@ -106,7 +115,9 @@
         color: blue;
      }
      
-     
+     .answers:hover {
+         cursor: pointer 
+     }
  
      .arrowFeedback {
          visibility: hidden;
